@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  confMap:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-12-15T18:28:06.176029822+08:00"
+    description: A Helm chart for Kubernetes
+    digest: ab9e37d7a3a6ce0eede15ebb79ce366c58c9e2b4665b29a4a73b1a2c6dd2567e
+    name: confMap
+    type: application
+    urls:
+    - confMap-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-12-15T18:28:06.175391605+08:00"
