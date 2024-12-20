@@ -19,8 +19,6 @@ spec:
         - name: java-app-container
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: "{{ .Values.image.pullPolicy }}"
-          command: ["java", "-jar", "demo-0.0.1-SNAPSHOT.jar"]
-          workingDir: "/home/work"
           # command: {{ .Values.javaApp.command }}
           # args: {{ .Values.javaApp.args }}
           ports:

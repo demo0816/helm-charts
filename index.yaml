@@ -3,7 +3,7 @@ entries:
   confMap:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-12-20T15:48:39.306610743+08:00"
+    created: "2024-12-20T15:54:44.971238213+08:00"
     description: A Helm chart for Kubernetes
     digest: ab9e37d7a3a6ce0eede15ebb79ce366c58c9e2b4665b29a4a73b1a2c6dd2567e
     name: confMap
@@ -14,12 +14,12 @@ entries:
   java-app-chart:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-12-20T15:48:39.306804536+08:00"
+    created: "2024-12-20T15:54:44.971423601+08:00"
     description: A Helm chart for deploying a Java application
-    digest: 1f844f8abe9de2efceea3d3e9be1035b755864b00e79d852a3a04c57d402a17c
+    digest: d49f5deb4d7ac5f8ff2c248133498be07af4a5c5b9e2274f35cb43a5a9c52511
     name: java-app-chart
     type: application
     urls:
     - java-app-chart-1.0.0.tgz
     version: 1.0.0
-generated: "2024-12-20T15:48:39.30609767+08:00"
+generated: "2024-12-20T15:54:44.970686579+08:00"
