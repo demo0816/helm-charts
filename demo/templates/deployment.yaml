@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: java-app-deployment
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: java-app
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: java-app
+  template:
+    metadata:
+      labels:
+        app: java-app
+    spec:
+      containers:
+        - name: java-app-container
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: "{{ .Values.image.pullPolicy }}"
+          command: {{ .Values.javaApp.command }}
+          args: {{ .Values.javaApp.args }}
+          ports:
+            - containerPort: 8080  # 根据你的Java应用实际监听端口修改
+          resources:
+            limits:
+              cpu: "1"  # CPU核心数限制，可根据实际需求调整，这里示例设为1个核心
+              memory: "1Gi"  # 内存限制，示例设为1GB内存，按需修改
+            requests:
+              cpu: "0.5"  # CPU核心数请求，初始分配0.5个核心，供调度器参考
+              memory: "512Mi"  # 内存请求，初始分配512MB内存，供调度器参考
