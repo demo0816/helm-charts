@@ -2,7 +2,7 @@ replicaCount: 1  # Pod副本数量
 namespace: agg
 
 image:
-  repository: crpi-jjlp5mhl3vlwr98e.cn-shanghai.personal.cr.aliyuncs.com/demo0816/demo  # 替换为你的Java应用镜像仓库地址
+  repository: crpi-jjlp5mhl3vlwr98e.cn-shanghai.personal.cr.aliyuncs.com/demo0816/demo # 替换为你的Java应用镜像仓库地址
   tag: 1.0.0  # 镜像标签，可按需修改为具体版本号
   pullPolicy: IfNotPresent  # 镜像拉取策略
 
