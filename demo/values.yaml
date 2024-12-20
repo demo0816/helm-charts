@@ -7,10 +7,7 @@ image:
   pullPolicy: IfNotPresent  # 镜像拉取策略
 
 javaApp:
-  command:
-    - sleep 10000000 && java
-    - -jar
-    - /home/work/demo-0.0.1-SNAPSHOT.jar  # 替换为你的实际Java应用的jar文件名
+  command: ["/bin/sh", "-c", "java -jar /home/work/demo-0.0.1-SNAPSHOT.jar"]
   args: []  # 如果有其他启动参数，可以在这里添加，例如 ["-Dspring.profiles.active=prod"] 等
 
 service:

@@ -19,14 +19,15 @@ spec:
         - name: java-app-container
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: "{{ .Values.image.pullPolicy }}"
-          command: ["/bin/sh", "-c", "sleep  1000000"]  # {{ .Values.javaApp.command }}
+          command: {{ toJson .Values.javaApp.command }}
+
           # args: {{ .Values.javaApp.args }}
           ports:
             - containerPort: 8080  # 根据你的Java应用实际监听端口修改
           resources:
             limits:
-              cpu: "1"  # CPU核心数限制，可根据实际需求调整，这里示例设为1个核心
-              memory: "1Gi"  # 内存限制，示例设为1GB内存，按需修改
+              cpu: "0.5"  # CPU核心数限制，可根据实际需求调整，这里示例设为1个核心
+              memory: "512Mi"  # 内存限制，示例设为1GB内存，按需修改
             requests:
-              cpu: "0.5"  # CPU核心数请求，初始分配0.5个核心，供调度器参考
-              memory: "512Mi"  # 内存请求，初始分配512MB内存，供调度器参考
+              cpu: "0.3"  # CPU核心数请求，初始分配0.5个核心，供调度器参考
+              memory: "256Mi"  # 内存请求，初始分配512MB内存，供调度器参考
