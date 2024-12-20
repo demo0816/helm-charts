@@ -19,7 +19,7 @@ spec:
         - name: java-app-container
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: "{{ .Values.image.pullPolicy }}"
-          command: {{ toJson .Values.javaApp.command }}
+          # command: {{ toJson .Values.javaApp.command }}
 
           # args: {{ .Values.javaApp.args }}
           ports:

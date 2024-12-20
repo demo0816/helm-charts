@@ -3,13 +3,13 @@ namespace: agg
 
 image:
   repository: crpi-jjlp5mhl3vlwr98e.cn-shanghai.personal.cr.aliyuncs.com/demo0816/demo  # 替换为你的Java应用镜像仓库地址
-  tag: 1.0.0  # 镜像标签，可按需修改为具体版本号
+  tag: 1.0.2  # 镜像标签，可按需修改为具体版本号
   pullPolicy: IfNotPresent  # 镜像拉取策略
 
 javaApp:
   #command: [ "java -jar /home/work/demo-0.0.1-SNAPSHOT.jar"]
-  command: ["sleep 1000000"]
-  args: []  # 如果有其他启动参数，可以在这里添加，例如 ["-Dspring.profiles.active=prod"] 等
+  # command: ["sleep 1000000"]
+  #args: []  # 如果有其他启动参数，可以在这里添加，例如 ["-Dspring.profiles.active=prod"] 等
 
 service:
   type: NodePort  # 服务类型，可以根据需要修改为NodePort、LoadBalancer等
