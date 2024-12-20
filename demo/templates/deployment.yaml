@@ -19,7 +19,7 @@ spec:
         - name: java-app-container
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: "{{ .Values.image.pullPolicy }}"
-          command: ["java", " -jar", " /home/work/demo-0.0.1-SNAPSHOT.jar"]
+          command: {{ .Values.javaApp.command }}
           # args: {{ .Values.javaApp.args }}
           ports:
             - containerPort: 8080  # 根据你的Java应用实际监听端口修改
