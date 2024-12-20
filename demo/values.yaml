@@ -8,7 +8,7 @@ image:
 
 javaApp:
   #command: [ "java -jar /home/work/demo-0.0.1-SNAPSHOT.jar"]
-  command: ["/bin/sh -c sleep 1000000"]
+  command: ["sleep 1000000"]
   args: []  # 如果有其他启动参数，可以在这里添加，例如 ["-Dspring.profiles.active=prod"] 等
 
 service:
