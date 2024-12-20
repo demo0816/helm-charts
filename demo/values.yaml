@@ -10,7 +10,6 @@ command:
   - java
   - -jar
   - demo-0.0.1-SNAPSHOT.jar
-  #args: []  # 如果有其他启动参数，可以在这里添加，例如 ["-Dspring.profiles.active=prod"] 等
 
 service:
   type: NodePort  # 服务类型，可以根据需要修改为NodePort、LoadBalancer等

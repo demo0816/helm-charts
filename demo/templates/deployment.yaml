@@ -20,7 +20,7 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: "{{ .Values.image.pullPolicy }}"
           command: {{ toYaml .Values.command | nindent 12 }} 
-          # args: {{ .Values.javaApp.args }}
+          
           ports:
             - containerPort: 8080  # 根据你的Java应用实际监听端口修改
           resources:
