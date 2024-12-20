@@ -7,7 +7,7 @@ image:
   pullPolicy: IfNotPresent  # 镜像拉取策略
 
 javaApp:
-  command: ["/bin/bash", "-c", "java -jar /home/work/demo-0.0.1-SNAPSHOT.jar"]
+  command: [ "java -jar /home/work/demo-0.0.1-SNAPSHOT.jar"]
   args: []  # 如果有其他启动参数，可以在这里添加，例如 ["-Dspring.profiles.active=prod"] 等
 
 service:
